@@ -1,5 +1,23 @@
 NAME = ExaTensor
 
+### THIS IS A SPECIAL TEST, SO YOU ONLY NEED TO READ RIGHT BELOW. ###
+### THE ONLY RELEVANT ENVIRONMENT VARIABLES YOU MAY NEED TO RESET ARE:
+### 1. WRAP = NOWRAP (default for all compilers except on Cray systems);
+###    WRAP = WRAP (activates the use of Cray compiler wrappers: ftn, cc, CC).
+### 2. TOOLKIT = {GNU|INTEL|CRAY|IBM}: Choose your compiler suite.
+###              Tested compilers: GNU 8.x (other versions have bugs);
+###                                INTEL 18.x (previous versions have bugs);
+###                                IBM XL 16.1.x (previous versions have bugs).
+### 3. MPILIB = MPICH (preferred: Works with MPICH/3.2.1 and higher);
+###                   (Cray-MPICH has open bugs, filed by Cathy Willis).
+###    MPILIB = OPENMPI (OpenMPI has bugs, sometimes works with OpenMPI/3.1.0);
+###                     (IBM SpectrumMPI based on OpenMPI works fine).
+### 4. PATH_MPICH = <path to your MPICH or Cray-MPICH root directory>.
+### 5. PATH_OPENMPI = <path to your OpenMPI or SpectrumMPI root directory>.
+### YOU MAY SIMPLY EXPORT THE ABOVE ENVIRONMENT VARIABLES AND MAKE. ###
+### YOU DO NOT NEED TO READ ANYTHING ELSE BELOW. ###
+
+
 #ADJUST THE FOLLOWING ENVIRONMENT VARIABLES ACCORDINGLY (choices are given)
 #until you see "YOU ARE DONE!". The comments will guide you through (read them).
 #Alternatively, you can export all relevant environment variables such that this
@@ -10,11 +28,11 @@ export WRAP ?= NOWRAP
 #Compiler: [GNU|PGI|INTEL|CRAY|IBM]:
 export TOOLKIT ?= GNU
 #Optimization: [DEV|OPT|PRF]:
-export BUILD_TYPE ?= OPT
+export BUILD_TYPE ?= DEV
 #MPI Library: [MPICH|OPENMPI]:
 export MPILIB ?= MPICH
 #BLAS: [ATLAS|MKL|ACML|ESSL|NONE]:
-export BLASLIB ?= ATLAS
+export BLASLIB ?= NONE
 #Nvidia GPU via CUDA: [CUDA|NOCUDA]:
 export GPU_CUDA ?= NOCUDA
 #Nvidia GPU architecture (two digits, >=35):
