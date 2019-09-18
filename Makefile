@@ -9,13 +9,13 @@ NAME = ExaTensor
 ###                                INTEL 18.x (previous versions have bugs);
 ###                                IBM XL 16.1.x (previous versions have bugs).
 ### 3. MPILIB = MPICH (preferred: Works with MPICH/3.2.1 and higher);
-###                   (Cray-MPICH has open bugs, filed by Cathy Willis).
+###                   (Cray-MPICH has open bugs, filed with Cray by Cathy Willis).
 ###    MPILIB = OPENMPI (OpenMPI has bugs, sometimes works with OpenMPI/3.1.0);
 ###                     (IBM SpectrumMPI based on OpenMPI works fine).
 ### 4. PATH_MPICH = <path to your MPICH or Cray-MPICH root directory>.
 ### 5. PATH_OPENMPI = <path to your OpenMPI or SpectrumMPI root directory>.
-### YOU MAY SIMPLY EXPORT THE ABOVE ENVIRONMENT VARIABLES AND MAKE. ###
-### YOU DO NOT NEED TO READ ANYTHING ELSE BELOW. ###
+### YOU MAY SIMPLY EXPORT THE ABOVE ENVIRONMENT VARIABLES AND MAKE AND ###
+### YOU DO NOT NEED TO READ ANYTHING ELSE BELOW, OR YOU MAY SET THEM HERE ###
 
 
 #ADJUST THE FOLLOWING ENVIRONMENT VARIABLES ACCORDINGLY (choices are given)
